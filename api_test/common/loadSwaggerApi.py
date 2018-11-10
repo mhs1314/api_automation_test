@@ -43,15 +43,15 @@ def swagger_api(url, project, user):
                 pass
             try:
                 if data["consumes"][0] == "application/json":
-                    requestApi["requestParameterType"] = "raw"
+                    requestApi["requestParameterType"] = "form-data"
                 else:
                     requestApi["requestParameterType"] = "form-data"
                 requestApi["headDict"] = [{"name": "Content-Type", "value": data["consumes"][0]}]
             except KeyError:
-                requestApi["requestParameterType"] = "raw"
+                pass
             for j in data["parameters"]:
                 if j["in"] == "header":
-                    requestApi["headDict"].append({"name": j["name"].title(), "value": "String"})
+                    requestApi["headDict"].append({"name": j["name"], "value": "String"})
                 elif j["in"] == "body":
                     dto = j["name"][:1].upper() + j["name"][1:]
                     try:
@@ -63,8 +63,12 @@ def swagger_api(url, project, user):
                         else:
                             parameter = []
                             for key, value in params[dto]["properties"].items():
-                                parameter.append({"name": key, "value": value["type"], "_type": value["tyep"],
-                                                  "required": True, "restrict": "", "description": ""})
+                                if  value["description"]:
+                                    parameter.append({"name": key, "value": value["name"], "_type": value["tyep"],
+                                                  "required": True, "restrict": "", "description": value["description"]})
+                                else:
+                                    parameter.append({"name": key, "value": value["name"], "_type": value["tyep"],
+                                                  "required": True, "restrict": "", "description": ""]})
                             requestApi["requestList"] = parameter
                         # print(requestApi)
                     except:
