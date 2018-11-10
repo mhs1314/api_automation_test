@@ -49,7 +49,7 @@ def swagger_api(url, project, user):
                 requestApi["headDict"] = [{"name": "Content-Type", "value": data["consumes"][0]}]
             except KeyError:
                 requestApi["requestParameterType"] = "raw"
-            if  data["parameters"]:
+            if "parameters" in data:
                 for j in data["parameters"]:
                     if j["in"] == "header":
                         requestApi["headDict"].append({"name": j["name"].title(), "value": "String"})
