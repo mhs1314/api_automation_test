@@ -43,36 +43,33 @@ def swagger_api(url, project, user):
                 pass
             try:
                 if data["consumes"][0] == "application/json":
-                    requestApi["requestParameterType"] = "form-data"
+                    requestApi["requestParameterType"] = "raw"
                 else:
                     requestApi["requestParameterType"] = "form-data"
                 requestApi["headDict"] = [{"name": "Content-Type", "value": data["consumes"][0]}]
             except KeyError:
-                pass
-            for j in data["parameters"]:
-                if j["in"] == "header":
-                    requestApi["headDict"].append({"name": j["name"], "value": "String"})
-                elif j["in"] == "body":
-                    dto = j["name"][:1].upper() + j["name"][1:]
-                    try:
-                        if requestApi["requestParameterType"] == "raw":
-                            parameter = {}
-                            for key, value in params[dto]["properties"].items():
-                                parameter[key] = value['type']
-                                requestApi["requestList"] = str(parameter)
-                        else:
-                            parameter = []
-                            for key, value in params[dto]["properties"].items():
-                                if  value["description"]:
-                                    parameter.append({"name": key, "value": value["name"], "_type": value["tyep"],
-                                    "required": True, "restrict": "", "description": value["description"]})
-                                else:
-                                    parameter.append({"name": key, "value": value["name"], "_type": value["tyep"],
-                                    "required": True, "restrict": "", "description": ""})
-                            requestApi["requestList"] = parameter
-                        # print(requestApi)
-                    except:
-                        pass
+                requestApi["requestParameterType"] = "raw"
+            if  data["parameters"]:
+                for j in data["parameters"]:
+                    if j["in"] == "header":
+                        requestApi["headDict"].append({"name": j["name"].title(), "value": "String"})
+                    elif j["in"] == "body":
+                        dto = j["name"][:1].upper() + j["name"][1:]
+                        try:
+                            if requestApi["requestParameterType"] == "raw":
+                                parameter = {}
+                                for key, value in params[dto]["properties"].items():
+                                    parameter[key] = value['type']
+                                    requestApi["requestList"] = str(parameter)
+                            else:
+                                parameter = []
+                                for key, value in params[dto]["properties"].items():
+                                    parameter.append({"name": key, "value": value["type"], "_type": value["tyep"],
+                                                      "required": True, "restrict": "", "description": ""})
+                                requestApi["requestList"] = parameter
+                            # print(requestApi)
+                        except:
+                            pass
         requestApi["userUpdate"] = user.id
         result = add_swagger_api(requestApi, user)
 
