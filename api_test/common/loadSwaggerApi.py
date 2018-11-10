@@ -65,10 +65,10 @@ def swagger_api(url, project, user):
                             for key, value in params[dto]["properties"].items():
                                 if  value["description"]:
                                     parameter.append({"name": key, "value": value["name"], "_type": value["tyep"],
-                                                  "required": True, "restrict": "", "description": value["description"]})
+                                    "required": True, "restrict": "", "description": value["description"]})
                                 else:
                                     parameter.append({"name": key, "value": value["name"], "_type": value["tyep"],
-                                                  "required": True, "restrict": "", "description": ""]})
+                                    "required": True, "restrict": "", "description": ""})
                             requestApi["requestList"] = parameter
                         # print(requestApi)
                     except:
