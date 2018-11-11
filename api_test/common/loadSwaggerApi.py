@@ -47,6 +47,7 @@ def swagger_api(url, project, user):
                     requestApi["requestParameterType"] = "form-data"
                 else:
                     requestApi["requestParameterType"] = "form-data"
+                requestApi["headDict"] = [{"name": "Content-Type", "value": data["consumes"][0]}]
             except KeyError:
                 logging.error("52")
                 requestApi["requestParameterType"] = "raw"
@@ -80,7 +81,7 @@ def swagger_api(url, project, user):
                             pass
                 requestApi["requestList"] = parameter
         requestApi["userUpdate"] = user.id
-        logging.error("requestApi "+requestApi["requestList"])
+        logging.error("requestApi "+requestApi)
         result = add_swagger_api(requestApi, user)
 
 
