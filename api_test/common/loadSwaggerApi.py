@@ -58,6 +58,7 @@ def swagger_api(url, project, user):
                         requestApi["headDict"].append({"name": j["name"].title(), "value": "String"})
                     elif j["in"] == "body":
                         dto = j["name"][:1].upper() + j["name"][1:]
+                        logging.error("dto——body" + dto)
                         try:
                             if requestApi["requestParameterType"] == "raw":
                                 parameter = {}
@@ -75,6 +76,7 @@ def swagger_api(url, project, user):
                             pass
                     elif j["in"] == "query":
                         dto = j["name"][:1].upper() + j["name"][1:]
+                        logging.error("dto——query" + dto)
                         try:
                             parameter = []
                             for key, value in params[dto]["properties"].items():
