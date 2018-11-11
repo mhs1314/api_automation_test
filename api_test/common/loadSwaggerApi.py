@@ -31,7 +31,7 @@ def swagger_api(url, project, user):
         pass
     for api, m in apis.items():
         requestApi = {
-            "project_id": project, "status": True, "mockStatus": "200", "code": "", "desc": "",
+            "project_id": project, "status": True, "mockStatus": True, "code": "", "desc": "",
             "httpType": "HTTP", "responseList": []
         }
         requestApi["apiAddress"] = api
@@ -124,6 +124,7 @@ def add_swagger_api(data, user):
                                             if param_serialize.is_valid():
                                                 param_serialize.save(api=ApiInfo.objects.get(id=api_id))
                                     except KeyError:
+                                        logging.error("data"+api_id)
                                         pass
                         except KeyError:
                             pass
