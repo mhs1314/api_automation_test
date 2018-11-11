@@ -81,7 +81,6 @@ def swagger_api(url, project, user):
                             pass
                 requestApi["requestList"] = parameter
         requestApi["userUpdate"] = user.id
-        logging.error("requestApi "+requestApi["requestList"])
         result = add_swagger_api(requestApi, user)
 
 
