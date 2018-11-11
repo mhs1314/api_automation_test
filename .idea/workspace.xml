@@ -52,14 +52,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="1" />
-          <entry key="py" value="196" />
-          <entry key="txt" value="23" />
+          <entry key="py" value="221" />
+          <entry key="txt" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="219" />
+          <entry key="PLAIN_TEXT" value="245" />
         </counts>
       </usages-collector>
     </session>
@@ -103,8 +103,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/api_test/common/loadSwaggerApi.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+                <state relative-caret-position="194">
+                  <caret line="46" column="67" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
                 </state>
               </provider>
             </entry>
@@ -165,8 +165,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/api-1.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="190">
-                      <caret line="872" column="11" lean-forward="true" selection-start-line="872" selection-start-column="11" selection-end-line="872" selection-end-column="11" />
+                    <state relative-caret-position="88">
+                      <caret line="866" column="17" selection-start-line="866" selection-start-column="13" selection-end-line="866" selection-end-column="17" />
                       <folding>
                         <element signature="e#4779#4806#0" />
                         <element signature="n#!!block;n#responses#0;n#!!block;n#post#0;n#!!block;n#/api/bondRecord/findBondRecordDetial#0;n#!!block;n#paths#0;n#!!top" />
@@ -212,7 +212,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>automationcaseapi</find>
       <find>addTest</find>
       <find>frequency</find>
       <find>unit</find>
@@ -242,6 +241,7 @@
       <find>responseList</find>
       <find>definitions</find>
       <find>parameters</find>
+      <find>_type</find>
     </findStrings>
     <replaceStrings>
       <replace>code=&quot;999997&quot;, msg=&quot;成功！&quot;</replace>
@@ -389,7 +389,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/project/api_automation_test/api_test/serializers.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541928265127" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541931443254" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -681,7 +681,35 @@
       <option name="project" value="LOCAL" />
       <updated>1541927828858</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="swagger-api 导入修改--1">
+      <created>1541928273461</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1541928273461</updated>
+    </task>
+    <task id="LOCAL-00034" summary="swagger-api 导入修改--3">
+      <created>1541930366134</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1541930366134</updated>
+    </task>
+    <task id="LOCAL-00035" summary="swagger-api 导入修改--1">
+      <created>1541930841137</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1541930841137</updated>
+    </task>
+    <task id="LOCAL-00036" summary="swagger-api 导入修改--1">
+      <created>1541931135607</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1541931135607</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView">
@@ -782,6 +810,7 @@
     <MESSAGE value="1.修改数据库地址" />
     <MESSAGE value="swagger-api 导入修改" />
     <MESSAGE value="swagger-api 导入修改--2" />
+    <MESSAGE value="swagger-api 导入修改--3" />
     <MESSAGE value="swagger-api 导入修改--1" />
     <option name="LAST_COMMIT_MESSAGE" value="swagger-api 导入修改--1" />
   </component>
@@ -1086,8 +1115,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api_test/common/loadSwaggerApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+        <state relative-caret-position="194">
+          <caret line="46" column="67" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
         </state>
       </provider>
     </entry>

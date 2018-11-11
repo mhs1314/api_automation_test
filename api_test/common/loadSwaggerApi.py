@@ -44,7 +44,7 @@ def swagger_api(url, project, user):
                 pass
             try:
                 if data["consumes"][0] == "application/json":
-                    requestApi["requestParameterType"] = "raw"
+                    requestApi["requestParameterType"] = "form-data"
                 else:
                     requestApi["requestParameterType"] = "form-data"
                 requestApi["headDict"] = [{"name": "Content-Type", "value": data["consumes"][0]}]
