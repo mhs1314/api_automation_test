@@ -114,8 +114,10 @@ def add_swagger_api(data, user):
                     except KeyError:
                         pass
                     if data["requestParameterType"] == "form-data":
+                        logging.error("form-data_start")
                         try:
                             if len(data["requestList"]):
+                                logging.error("form-data_start_num " + en(data["requestList"])
                                 for i in data["requestList"]:
                                     try:
                                         if i["name"]:
@@ -124,7 +126,7 @@ def add_swagger_api(data, user):
                                             if param_serialize.is_valid():
                                                 param_serialize.save(api=ApiInfo.objects.get(id=api_id))
                                     except KeyError:
-                                        logging.error("data"+api_id)
+                                        logging.error("form-data_erro "+api_id)
                                         pass
                         except KeyError:
                             pass
