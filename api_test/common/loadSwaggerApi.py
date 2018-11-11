@@ -73,15 +73,26 @@ def swagger_api(url, project, user):
                         logging.error("dto——query " + dto)
                         try:
                             if "description" in j:
-                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
                             else:
-                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
                         except:
                             logging.error("query84")
                             pass
                 requestApi["requestList"] = parameter
+            if "responses" in data:
+                response = []
+                for j in data["responses"]:
+                    if "schema" in data["200"]:
+                        ref = data["200"]["schema"]["$ref"]
+                        dto = ref.split("／")[2]
+                        for key, value in params[dto]["properties"].items():
+                            if "description" in j:
+                                response.append({"name": key, "value": "", "_type": value["type"],"required": True, "description": value["description"]})
+                            else:
+                                response.append({"name": key, "value": "", "_type": value["type"],"required": True, "description": value["description"]})
+                requestApi["responseList"] = response
         requestApi["userUpdate"] = user.id
-        logging.error(requestApi)
         result = add_swagger_api(requestApi, user)
 
 
@@ -125,13 +136,10 @@ def add_swagger_api(data, user):
                                             i["api"] = api_id
                                             logging.error("form-data_id ")
                                             param_serialize = ApiParameterDeserializer(data=i)
-                                            logging.error(param_serialize)
-                                            logging.error(param_serialize.is_valid())
                                             if param_serialize.is_valid():
                                                 logging.error("form-data_save ")
                                                 param_serialize.save(api=ApiInfo.objects.get(id=api_id))
                                     except KeyError:
-                                        logging.error("form-data_erro "+api_id)
                                         pass
                         except KeyError:
                             pass
