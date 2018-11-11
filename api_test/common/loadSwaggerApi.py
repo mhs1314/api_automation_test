@@ -123,7 +123,7 @@ def add_swagger_api(data, user):
                                     try:
                                         if i["name"]:
                                             i["api"] = api_id
-                                            logging.error("form-data_id "+api_id)
+                                            logging.error("form-data_id ")
                                             param_serialize = ApiParameterDeserializer(data=i)
                                             if param_serialize.is_valid():
                                                 logging.error("form-data_save ")
