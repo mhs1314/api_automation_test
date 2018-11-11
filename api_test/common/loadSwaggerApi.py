@@ -59,7 +59,7 @@ def swagger_api(url, project, user):
                         requestApi["headDict"].append({"name": j["name"].title(), "value": "String"})
                     elif j["in"] == "body":
                         dto = j["name"][:1].upper() + j["name"][1:]
-                        logging.error("dto——body " + j)
+                        logging.error("dto——body " + dto)
                         try:
                             parameter.append({"name": dto, "value": "", "_type": j["type"],
                                                       "required": j["required"], "restrict": "", "description": j["description"]})
@@ -68,7 +68,7 @@ def swagger_api(url, project, user):
                             pass
                     elif j["in"] == "query":
                         dto = j["name"][:1].upper() + j["name"][1:]
-                        logging.error("dto——query " + j)
+                        logging.error("dto——query " + dto)
                         try:
                             parameter.append({"name": dto, "value": "", "_type": j["type"],
                                                   "required": j["required"], "restrict": "", "description": j["description"]})
