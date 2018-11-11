@@ -69,6 +69,16 @@ def swagger_api(url, project, user):
                                 requestApi["requestList"] = parameter
                         except:
                             pass
+                    elif j["in"] == "query":
+                        dto = j["name"][:1].upper() + j["name"][1:]
+                        try:
+                            parameter = []
+                            for key, value in params[dto]["properties"].items():
+                                parameter.append({"name": key, "value": value["type"], "_type": value["tyep"],
+                                                  "required": True, "restrict": "", "description": ""})
+                            requestApi["requestList"] = parameter
+                        except:
+                            pass
         requestApi["userUpdate"] = user.id
         logging.error(requestApi)
         result = add_swagger_api(requestApi, user)
