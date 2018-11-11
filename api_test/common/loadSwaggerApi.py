@@ -47,7 +47,6 @@ def swagger_api(url, project, user):
                     requestApi["requestParameterType"] = "form-data"
                 else:
                     requestApi["requestParameterType"] = "form-data"
-                requestApi["headDict"] = [{"name": "Content-Type", "value": data["consumes"][0]}]
             except KeyError:
                 logging.error("52")
                 requestApi["requestParameterType"] = "raw"
@@ -56,15 +55,15 @@ def swagger_api(url, project, user):
                 for j in data["parameters"]:
                     if j["in"] == "header":
                         logging.error("header57")
-                        requestApi["headDict"].append({"name": j["name"].title(), "value": "String"})
+                        requestApi["headDict"].append({"name": j["name"], "value": "String"})
                     elif j["in"] == "body":
                         dto = j["name"][:1].upper() + j["name"][1:]
                         logging.error("dto——body " + dto)
                         try:
                             if "description" in j:
-                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
                             else:
-                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
                         except:
                             logging.error("body71")
                             pass
@@ -73,9 +72,9 @@ def swagger_api(url, project, user):
                         logging.error("dto——query " + dto)
                         try:
                             if "description" in j:
-                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
                             else:
-                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
                         except:
                             logging.error("query84")
                             pass
