@@ -40,6 +40,7 @@ def swagger_api(url, project, user):
             try:
                 requestApi["name"] = data["summary"]
             except KeyError:
+                logging.error("43")
                 pass
             try:
                 if data["consumes"][0] == "application/json":
@@ -48,10 +49,12 @@ def swagger_api(url, project, user):
                     requestApi["requestParameterType"] = "form-data"
                 requestApi["headDict"] = [{"name": "Content-Type", "value": data["consumes"][0]}]
             except KeyError:
+                logging.error("52")
                 requestApi["requestParameterType"] = "raw"
             if "parameters" in data:
                 for j in data["parameters"]:
                     if j["in"] == "header":
+                        logging.error("header57")
                         requestApi["headDict"].append({"name": j["name"].title(), "value": "String"})
                     elif j["in"] == "body":
                         dto = j["name"][:1].upper() + j["name"][1:]
@@ -68,6 +71,7 @@ def swagger_api(url, project, user):
                                                       "required": True, "restrict": "", "description": ""})
                                 requestApi["requestList"] = parameter
                         except:
+                            logging.error("body71")
                             pass
                     elif j["in"] == "query":
                         dto = j["name"][:1].upper() + j["name"][1:]
@@ -78,6 +82,7 @@ def swagger_api(url, project, user):
                                                   "required": True, "restrict": "", "description": ""})
                             requestApi["requestList"] = parameter
                         except:
+                            logging.error("query84")
                             pass
         requestApi["userUpdate"] = user.id
         logging.error(requestApi)
