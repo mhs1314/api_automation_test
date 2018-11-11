@@ -73,14 +73,15 @@ def swagger_api(url, project, user):
                         logging.error("dto——query " + dto)
                         try:
                             if "description" in j:
-                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
+                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
                             else:
-                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
+                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
                         except:
                             logging.error("query84")
                             pass
                 requestApi["requestList"] = parameter
         requestApi["userUpdate"] = user.id
+        logging.error(requestApi)
         result = add_swagger_api(requestApi, user)
 
 
@@ -123,7 +124,6 @@ def add_swagger_api(data, user):
                                             if param_serialize.is_valid():
                                                 param_serialize.save(api=ApiInfo.objects.get(id=api_id))
                                     except KeyError:
-                                        logging.error("data "+data["requestList"])
                                         pass
                         except KeyError:
                             pass
