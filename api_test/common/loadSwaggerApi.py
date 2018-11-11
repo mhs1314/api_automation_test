@@ -62,9 +62,9 @@ def swagger_api(url, project, user):
                         logging.error("dto——body " + dto)
                         try:
                             if "description" in j:
-                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
+                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
                             else:
-                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
+                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
                         except:
                             logging.error("body71")
                             pass
@@ -73,9 +73,9 @@ def swagger_api(url, project, user):
                         logging.error("dto——query " + dto)
                         try:
                             if "description" in j:
-                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
+                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
                             else:
-                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
+                                parameter.append({"name": dto, "value": j["type"], "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
                         except:
                             logging.error("query84")
                             pass
