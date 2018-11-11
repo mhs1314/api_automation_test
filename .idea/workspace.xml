@@ -52,14 +52,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="1" />
-          <entry key="py" value="190" />
+          <entry key="py" value="196" />
           <entry key="txt" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="213" />
+          <entry key="PLAIN_TEXT" value="219" />
         </counts>
       </usages-collector>
     </session>
@@ -103,8 +103,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/api_test/common/loadSwaggerApi.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
-                  <caret line="72" column="106" lean-forward="true" selection-start-line="72" selection-start-column="106" selection-end-line="72" selection-end-column="106" />
+                <state relative-caret-position="375">
+                  <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -357,8 +357,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="18" />
-    <option name="y" value="65" />
+    <option name="x" value="71" />
+    <option name="y" value="38" />
     <option name="width" value="1273" />
     <option name="height" value="690" />
   </component>
@@ -389,7 +389,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/project/api_automation_test/api_test/serializers.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541924939114" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541928265127" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -667,7 +667,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541924597028</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="swagger-api 导入修改--1">
+      <created>1541924943908</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1541924943908</updated>
+    </task>
+    <task id="LOCAL-00032" summary="swagger-api 导入修改--1">
+      <created>1541927828858</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1541927828858</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView">
@@ -680,7 +694,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="18" y="65" width="1273" height="690" extended-state="0" />
+    <frame x="71" y="38" width="1273" height="690" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -1072,8 +1086,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api_test/common/loadSwaggerApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="72" column="106" lean-forward="true" selection-start-line="72" selection-start-column="106" selection-end-line="72" selection-end-column="106" />
+        <state relative-caret-position="375">
+          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
         </state>
       </provider>
     </entry>
