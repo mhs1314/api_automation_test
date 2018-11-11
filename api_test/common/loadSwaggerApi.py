@@ -62,7 +62,7 @@ def swagger_api(url, project, user):
                         logging.error("dto——body " + dto)
                         try:
                             parameter.append({"name": dto, "value": "", "_type": value["type"],
-                                                      "required": value["required"], "restrict": "", "description": value["description"]})
+                                                      "required": True, "restrict": "", "description": ""})
                         except:
                             logging.error("body71")
                             pass
@@ -71,7 +71,7 @@ def swagger_api(url, project, user):
                         logging.error("dto——query " + dto)
                         try:
                             parameter.append({"name": dto, "value": "", "_type": value["type"],
-                                                  "required": value["required"], "restrict": "", "description": value["description"]})
+                                                  "required": True, "restrict": "", "description": ""})
                         except:
                             logging.error("query84")
                             pass
