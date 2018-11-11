@@ -81,7 +81,7 @@ def swagger_api(url, project, user):
                             pass
                 requestApi["requestList"] = parameter
         requestApi["userUpdate"] = user.id
-        logging.error(requestApi)
+        logging.error("requestApi "+requestApi)
         result = add_swagger_api(requestApi, user)
 
 
@@ -124,6 +124,7 @@ def add_swagger_api(data, user):
                                             if param_serialize.is_valid():
                                                 param_serialize.save(api=ApiInfo.objects.get(id=api_id))
                                     except KeyError:
+                                        logging.error("data "+data["requestList"])
                                         pass
                         except KeyError:
                             pass
