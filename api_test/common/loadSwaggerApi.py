@@ -117,7 +117,7 @@ def add_swagger_api(data, user):
                         logging.error("form-data_start")
                         try:
                             if len(data["requestList"]):
-                                logging.error("form-data_start_num " + en(data["requestList"])
+                                logging.error("form-data_start_num ")
                                 for i in data["requestList"]:
                                     try:
                                         if i["name"]:
