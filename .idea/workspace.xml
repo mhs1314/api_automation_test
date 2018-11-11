@@ -52,20 +52,20 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="1" />
-          <entry key="py" value="221" />
+          <entry key="py" value="300" />
           <entry key="txt" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="245" />
+          <entry key="PLAIN_TEXT" value="324" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.58691204">
+    <splitter split-orientation="horizontal" split-proportion="0.9">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -103,8 +103,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/api_test/common/loadSwaggerApi.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="194">
-                  <caret line="46" column="67" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
+                <state relative-caret-position="448">
+                  <caret line="74" column="50" lean-forward="true" selection-start-line="74" selection-start-column="50" selection-end-line="74" selection-end-column="50" />
                 </state>
               </provider>
             </entry>
@@ -165,8 +165,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/api-1.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="88">
-                      <caret line="866" column="17" selection-start-line="866" selection-start-column="13" selection-end-line="866" selection-end-column="17" />
+                    <state relative-caret-position="55">
+                      <caret line="7894" column="22" selection-start-line="7894" selection-start-column="11" selection-end-line="7894" selection-end-column="22" />
                       <folding>
                         <element signature="e#4779#4806#0" />
                         <element signature="n#!!block;n#responses#0;n#!!block;n#post#0;n#!!block;n#/api/bondRecord/findBondRecordDetial#0;n#!!block;n#paths#0;n#!!top" />
@@ -178,7 +178,6 @@
                         <element signature="n#!!block;n#responses#0;n#!!block;n#post#0;n#!!block;n#/login/login_by_smscode#0;n#!!block;n#paths#0;n#!!top" />
                         <element signature="n#!!block;n#properties#0;n#!!block;n#ResCooperationScheduleDto#0;n#!!block;n#definitions#0;n#!!top" />
                         <element signature="n#!!block;n#properties#0;n#!!block;n#ResDemandCategoryDetialDto#0;n#!!block;n#definitions#0;n#!!top" />
-                        <element signature="n#!!block;n#properties#0;n#!!block;n#ResDemandCategoryListDto#0;n#!!block;n#definitions#0;n#!!top" />
                         <element signature="n#!!block;n#properties#0;n#!!block;n#ResDemandDetialDto#0;n#!!block;n#definitions#0;n#!!top" />
                         <element signature="n#!!block;n#properties#0;n#!!block;n#ResDemandHotelDetialDto#0;n#!!block;n#definitions#0;n#!!top" />
                         <element signature="n#!!block;n#properties#0;n#!!block;n#ResDetialCaseDto#0;n#!!block;n#definitions#0;n#!!top" />
@@ -212,7 +211,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addTest</find>
       <find>frequency</find>
       <find>unit</find>
       <find>ApiInfoSerializer</find>
@@ -242,6 +240,7 @@
       <find>definitions</find>
       <find>parameters</find>
       <find>_type</find>
+      <find>conditions</find>
     </findStrings>
     <replaceStrings>
       <replace>code=&quot;999997&quot;, msg=&quot;成功！&quot;</replace>
@@ -330,8 +329,8 @@
         <option value="$PROJECT_DIR$/api_automation_test/urls.py" />
         <option value="$PROJECT_DIR$/frontend/package.json" />
         <option value="$PROJECT_DIR$/api_test/api/ApiDoc.py" />
-        <option value="$PROJECT_DIR$/api-1.json" />
         <option value="$PROJECT_DIR$/api.json" />
+        <option value="$PROJECT_DIR$/api-1.json" />
         <option value="$PROJECT_DIR$/api_test/common/loadSwaggerApi.py" />
       </list>
     </option>
@@ -356,11 +355,11 @@
       <path value="$PROJECT_DIR$/frontend/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="71" />
-    <option name="y" value="38" />
-    <option name="width" value="1273" />
-    <option name="height" value="690" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="85" />
+    <option name="y" value="88" />
+    <option name="width" value="1276" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -389,7 +388,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/project/api_automation_test/api_test/serializers.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541931443254" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541932219452" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -709,7 +708,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541931135607</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="swagger-api 导入修改--1">
+      <created>1541931450828</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1541931450828</updated>
+    </task>
+    <task id="LOCAL-00038" summary="swagger-api 导入修改--1">
+      <created>1541931916145</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1541931916145</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView">
@@ -722,7 +735,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="38" width="1273" height="690" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -730,7 +743,7 @@
       <window_info id="DB Browser" weight="0.32981315" />
       <window_info id="Capture Tool" />
       <window_info id="UI Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20552397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20436187" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="DB Execution Console" />
@@ -1115,8 +1128,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api_test/common/loadSwaggerApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="46" column="67" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
+        <state relative-caret-position="448">
+          <caret line="74" column="50" lean-forward="true" selection-start-line="74" selection-start-column="50" selection-end-line="74" selection-end-column="50" />
         </state>
       </provider>
     </entry>
