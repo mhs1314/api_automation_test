@@ -61,8 +61,10 @@ def swagger_api(url, project, user):
                         dto = j["name"][:1].upper() + j["name"][1:]
                         logging.error("dto——body " + dto)
                         try:
-                            parameter.append({"name": dto, "value": "", "_type": j["type"],
-                                                      "required": j["required"], "restrict": "", "description": j["description"]})
+                            if "description" in j
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
+                            else:
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
                         except:
                             logging.error("body71")
                             pass
@@ -70,8 +72,10 @@ def swagger_api(url, project, user):
                         dto = j["name"][:1].upper() + j["name"][1:]
                         logging.error("dto——query " + dto)
                         try:
-                            parameter.append({"name": dto, "value": "", "_type": j["type"],
-                                                  "required": j["required"], "restrict": "", "description": j["description"]})
+                            if "description" in j
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
+                            else:
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
                         except:
                             logging.error("query84")
                             pass
