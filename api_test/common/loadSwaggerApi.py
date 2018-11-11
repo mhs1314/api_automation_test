@@ -52,40 +52,30 @@ def swagger_api(url, project, user):
                 logging.error("52")
                 requestApi["requestParameterType"] = "raw"
             if "parameters" in data:
+                parameter = []
                 for j in data["parameters"]:
                     if j["in"] == "header":
                         logging.error("header57")
                         requestApi["headDict"].append({"name": j["name"].title(), "value": "String"})
                     elif j["in"] == "body":
                         dto = j["name"][:1].upper() + j["name"][1:]
-                        logging.error("dto——body" + dto)
+                        logging.error("dto——body " + dto)
                         try:
-                            if requestApi["requestParameterType"] == "raw":
-                                parameter = {}
-                                for key, value in params[dto]["properties"].items():
-                                    parameter[key] = value['type']
-                                    requestApi["requestList"] = str(parameter)
-                            else:
-                                parameter = []
-                                for key, value in params[dto]["properties"].items():
-                                    parameter.append({"name": key, "value": value["type"], "_type": value["tyep"],
-                                                      "required": True, "restrict": "", "description": ""})
-                                requestApi["requestList"] = parameter
+                            parameter.append({"name": key, "value": value["type"], "_type": value["tyep"],
+                                                      "required": value["required"], "restrict": "", "description": value["description"]})
                         except:
                             logging.error("body71")
                             pass
                     elif j["in"] == "query":
                         dto = j["name"][:1].upper() + j["name"][1:]
-                        logging.error("dto——query" + dto)
+                        logging.error("dto——query " + dto)
                         try:
-                            parameter = []
-                            for key, value in params[dto]["properties"].items():
-                                parameter.append({"name": key, "value": value["type"], "_type": value["tyep"],
-                                                  "required": True, "restrict": "", "description": ""})
-                            requestApi["requestList"] = parameter
+                            parameter.append({"name": key, "value": value["type"], "_type": value["tyep"],
+                                                  "required": value["required"], "restrict": "", "description": value["description"})
                         except:
                             logging.error("query84")
                             pass
+                requestApi["requestList"] = parameter
         requestApi["userUpdate"] = user.id
         logging.error(requestApi)
         result = add_swagger_api(requestApi, user)
