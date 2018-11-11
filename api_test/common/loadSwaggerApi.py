@@ -125,9 +125,8 @@ def add_swagger_api(data, user):
                                             i["api"] = api_id
                                             logging.error("form-data_id ")
                                             param_serialize = ApiParameterDeserializer(data=i)
-                                            if param_serialize.is_valid():
-                                                logging.error("form-data_save ")
-                                                param_serialize.save(api=ApiInfo.objects.get(id=api_id))
+                                            logging.error("form-data_save ")
+                                            param_serialize.save(api=ApiInfo.objects.get(id=api_id))
                                     except KeyError:
                                         logging.error("form-data_erro "+api_id)
                                         pass
