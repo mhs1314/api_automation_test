@@ -61,7 +61,7 @@ def swagger_api(url, project, user):
                         dto = j["name"][:1].upper() + j["name"][1:]
                         logging.error("dto——body " + dto)
                         try:
-                            if "description" in j
+                            if "description" in j:
                                 parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
                             else:
                                 parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
