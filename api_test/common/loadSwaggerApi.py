@@ -85,7 +85,7 @@ def swagger_api(url, project, user):
                 for j in data["responses"]:
                     if "schema" in data["responses"]["200"]:
                         ref = data["responses"]["200"]["schema"]["$ref"]
-                        dto = ref.split("\／")
+                        dto = ref.split("/")[2]
                         logging.error(dto)
                         for key, value in params[dto]["properties"].items():
                             if "description" in j:
