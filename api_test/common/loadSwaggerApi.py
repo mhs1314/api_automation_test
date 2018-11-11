@@ -71,7 +71,7 @@ def swagger_api(url, project, user):
                         logging.error("dto——query " + dto)
                         try:
                             parameter.append({"name": key, "value": value["type"], "_type": value["tyep"],
-                                                  "required": value["required"], "restrict": "", "description": value["description"})
+                                                  "required": value["required"], "restrict": "", "description": value["description"]})
                         except:
                             logging.error("query84")
                             pass

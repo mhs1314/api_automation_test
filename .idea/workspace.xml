@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bff3874-0f80-4ef6-957e-fc1f35d5523e" name="Default" comment="swagger-api 导入修改">
-      <change afterPath="$PROJECT_DIR$/api-1.json" afterDir="false" />
+    <list default="true" id="1bff3874-0f80-4ef6-957e-fc1f35d5523e" name="Default" comment="swagger-api 导入修改--1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_test/common/loadSwaggerApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test/common/loadSwaggerApi.py" afterDir="false" />
     </list>
@@ -53,20 +52,20 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="1" />
-          <entry key="py" value="100" />
-          <entry key="txt" value="19" />
+          <entry key="py" value="190" />
+          <entry key="txt" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="119" />
+          <entry key="PLAIN_TEXT" value="213" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5012185">
+    <splitter split-orientation="horizontal" split-proportion="0.58691204">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -104,8 +103,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/api_test/common/loadSwaggerApi.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="267">
-                  <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+                <state relative-caret-position="248">
+                  <caret line="72" column="106" lean-forward="true" selection-start-line="72" selection-start-column="106" selection-end-line="72" selection-end-column="106" />
                 </state>
               </provider>
             </entry>
@@ -132,8 +131,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/api-1.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="177">
-                  <caret line="4301" column="23" lean-forward="true" selection-start-line="4301" selection-start-column="23" selection-end-line="4301" selection-end-column="23" />
+                <state relative-caret-position="92">
+                  <caret line="4296" column="15" lean-forward="true" selection-start-line="4296" selection-start-column="15" selection-end-line="4296" selection-end-column="15" />
                   <folding>
                     <element signature="e#4779#4806#0" />
                     <element signature="n#!!block;n#responses#0;n#!!block;n#post#0;n#!!block;n#/api/bondRecord/findBondRecordDetial#0;n#!!block;n#paths#0;n#!!top" />
@@ -151,14 +150,14 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.5">
+        <splitter split-orientation="vertical" split-proportion="0.60033447">
           <split-first>
             <leaf>
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/api.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="79">
-                      <caret line="2022" column="13" selection-start-line="2022" selection-start-column="3" selection-end-line="2022" selection-end-column="13" />
+                    <state relative-caret-position="113">
+                      <caret line="2024" column="1" lean-forward="true" selection-start-line="2024" selection-start-column="1" selection-end-line="2024" selection-end-column="1" />
                     </state>
                   </provider>
                 </entry>
@@ -166,8 +165,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/api-1.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="109">
-                      <caret line="7605" column="24" selection-start-line="7605" selection-start-column="19" selection-end-line="7605" selection-end-column="24" />
+                    <state relative-caret-position="190">
+                      <caret line="872" column="11" lean-forward="true" selection-start-line="872" selection-start-column="11" selection-end-line="872" selection-end-column="11" />
                       <folding>
                         <element signature="e#4779#4806#0" />
                         <element signature="n#!!block;n#responses#0;n#!!block;n#post#0;n#!!block;n#/api/bondRecord/findBondRecordDetial#0;n#!!block;n#paths#0;n#!!top" />
@@ -177,6 +176,16 @@
                         <element signature="e#172837#179166#0" />
                         <element signature="e#179952#180505#0" />
                         <element signature="n#!!block;n#responses#0;n#!!block;n#post#0;n#!!block;n#/login/login_by_smscode#0;n#!!block;n#paths#0;n#!!top" />
+                        <element signature="n#!!block;n#properties#0;n#!!block;n#ResCooperationScheduleDto#0;n#!!block;n#definitions#0;n#!!top" />
+                        <element signature="n#!!block;n#properties#0;n#!!block;n#ResDemandCategoryDetialDto#0;n#!!block;n#definitions#0;n#!!top" />
+                        <element signature="n#!!block;n#properties#0;n#!!block;n#ResDemandCategoryListDto#0;n#!!block;n#definitions#0;n#!!top" />
+                        <element signature="n#!!block;n#properties#0;n#!!block;n#ResDemandDetialDto#0;n#!!block;n#definitions#0;n#!!top" />
+                        <element signature="n#!!block;n#properties#0;n#!!block;n#ResDemandHotelDetialDto#0;n#!!block;n#definitions#0;n#!!top" />
+                        <element signature="n#!!block;n#properties#0;n#!!block;n#ResDetialCaseDto#0;n#!!block;n#definitions#0;n#!!top" />
+                        <element signature="n#!!block;n#properties#0;n#!!block;n#ResDetialShopDto#0;n#!!block;n#definitions#0;n#!!top" />
+                        <element signature="n#!!block;n#properties#0;n#!!block;n#ResEvakuateCountDto#0;n#!!block;n#definitions#0;n#!!top" />
+                        <element signature="n#!!block;n#properties#0;n#!!block;n#ResEvakuateDetialDto#0;n#!!block;n#definitions#0;n#!!top" />
+                        <element signature="n#!!block;n#properties#0;n#!!block;n#ResEvakuateListDto#0;n#!!block;n#definitions#0;n#!!top" />
                       </folding>
                     </state>
                   </provider>
@@ -189,8 +198,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/api.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="56">
-                      <caret line="2028" column="15" lean-forward="true" selection-start-line="2028" selection-start-column="15" selection-end-line="2028" selection-end-column="15" />
+                    <state relative-caret-position="105">
+                      <caret line="2034" column="10" selection-start-line="2034" selection-start-column="10" selection-end-line="2034" selection-end-column="10" />
                     </state>
                   </provider>
                 </entry>
@@ -203,7 +212,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>watch</find>
       <find>automationcaseapi</find>
       <find>addTest</find>
       <find>frequency</find>
@@ -225,14 +233,15 @@
       <find>游客登录</find>
       <find>查询订单进展--服务商</find>
       <find>log</find>
-      <find>parameters</find>
       <find>swagger_api</find>
       <find>title()</find>
       <find>2018-11-11 12:58:27,918,8038,root,ERROR,loadSwaggerApi.py:73,</find>
+      <find>headDict</find>
+      <find>params</find>
+      <find>&quot;body&quot;</find>
       <find>responseList</find>
       <find>definitions</find>
-      <find>headDict</find>
-      <find>&quot;body&quot;</find>
+      <find>parameters</find>
     </findStrings>
     <replaceStrings>
       <replace>code=&quot;999997&quot;, msg=&quot;成功！&quot;</replace>
@@ -348,8 +357,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="209" />
-    <option name="y" value="61" />
+    <option name="x" value="18" />
+    <option name="y" value="65" />
     <option name="width" value="1273" />
     <option name="height" value="690" />
   </component>
@@ -369,28 +378,6 @@
               <item name="api_automation_test" type="b2602c69:ProjectViewProjectNode" />
               <item name="api_automation_test" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="api_automation_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api_automation_test" type="462c0819:PsiDirectoryNode" />
-              <item name="api_automation_test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api_automation_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api_automation_test" type="462c0819:PsiDirectoryNode" />
-              <item name="api_test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api_automation_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api_automation_test" type="462c0819:PsiDirectoryNode" />
-              <item name="api_test" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api_automation_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api_automation_test" type="462c0819:PsiDirectoryNode" />
-              <item name="api_test" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -402,7 +389,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/project/api_automation_test/api_test/serializers.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541917608289" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541924939114" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -652,7 +639,35 @@
       <option name="project" value="LOCAL" />
       <updated>1541912138308</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="swagger-api 导入修改--1">
+      <created>1541917672297</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1541917672297</updated>
+    </task>
+    <task id="LOCAL-00028" summary="swagger-api 导入修改--1">
+      <created>1541918442088</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1541918442088</updated>
+    </task>
+    <task id="LOCAL-00029" summary="swagger-api 导入修改--2">
+      <created>1541919745321</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1541919745322</updated>
+    </task>
+    <task id="LOCAL-00030" summary="swagger-api 导入修改--1">
+      <created>1541924597028</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1541924597028</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView">
@@ -665,15 +680,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-27" y="26" width="1273" height="690" extended-state="0" />
+    <frame x="18" y="65" width="1273" height="690" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
-      <window_info id="DB Browser" />
+      <window_info id="DB Browser" weight="0.32981315" />
       <window_info id="Capture Tool" />
       <window_info id="UI Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20552397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="DB Execution Console" />
@@ -752,7 +767,9 @@
     <MESSAGE value="1.新增mock功能&#10;2.优化前端页面" />
     <MESSAGE value="1.修改数据库地址" />
     <MESSAGE value="swagger-api 导入修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="swagger-api 导入修改" />
+    <MESSAGE value="swagger-api 导入修改--2" />
+    <MESSAGE value="swagger-api 导入修改--1" />
+    <option name="LAST_COMMIT_MESSAGE" value="swagger-api 导入修改--1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/frontend/src/views/project/automation/AddCaseApi.vue">
@@ -1031,15 +1048,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="2022" column="13" selection-start-line="2022" selection-start-column="3" selection-end-line="2022" selection-end-column="13" />
+        <state relative-caret-position="113">
+          <caret line="2024" column="1" lean-forward="true" selection-start-line="2024" selection-start-column="1" selection-end-line="2024" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api-1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="4301" column="23" lean-forward="true" selection-start-line="4301" selection-start-column="23" selection-end-line="4301" selection-end-column="23" />
+        <state relative-caret-position="92">
+          <caret line="4296" column="15" lean-forward="true" selection-start-line="4296" selection-start-column="15" selection-end-line="4296" selection-end-column="15" />
           <folding>
             <element signature="e#4779#4806#0" />
             <element signature="n#!!block;n#responses#0;n#!!block;n#post#0;n#!!block;n#/api/bondRecord/findBondRecordDetial#0;n#!!block;n#paths#0;n#!!top" />
@@ -1055,8 +1072,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api_test/common/loadSwaggerApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+        <state relative-caret-position="248">
+          <caret line="72" column="106" lean-forward="true" selection-start-line="72" selection-start-column="106" selection-end-line="72" selection-end-column="106" />
         </state>
       </provider>
     </entry>
