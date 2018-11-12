@@ -92,7 +92,9 @@ def swagger_api(url, project, user):
                             response.append({"name": key, "value": "", "_type": "String","required": True, "description": ""})
                         if "items" in value:
                             if "$ref" in value["items"]:
-                                for key1, value1 in params[value["items"]["$ref"]]["properties"].items():
+                                ref1 = value["items"]["$ref"]
+                                dto1 = ref1.split("/")[2]
+                                for key1, value1 in params[dto1]["properties"].items():
                                     if "description" in value1 and "type" in value1:
                                         response.append({"name": key + "." +key1, "value": value1["description"], "_type": value1["type"],"required": True, "description": value1["description"]})
                                     else:
