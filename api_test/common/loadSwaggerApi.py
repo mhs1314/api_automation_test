@@ -85,13 +85,18 @@ def swagger_api(url, project, user):
                 if "schema" in data["responses"]["200"]:
                     ref = data["responses"]["200"]["schema"]["$ref"]
                     dto = ref.split("/")[2]
-                    logging.error(dto)
                     for key, value in params[dto]["properties"].items():
-                        logging.error(key)
                         if "description" in value and "type" in value:
                             response.append({"name": key, "value": value["description"], "_type": value["type"],"required": True, "description": value["description"]})
                         else:
                             response.append({"name": key, "value": "", "_type": "String","required": True, "description": ""})
+                        if "items" in value:
+                            if "$ref" in value["items"]:
+                                for key1, value1 in params[value["items"]["$ref"]]["properties"].items():
+                                    if "description" in value1 and "type" in value1:
+                                        response.append({"name": key + "." +key1, "value": value1["description"], "_type": value1["type"],"required": True, "description": value1["description"]})
+                                    else:
+                                        response.append({"name": key + "." +key1, "value": "", "_type": "String","required": True, "description": ""})
                 requestApi["responseList"] = response
         requestApi["userUpdate"] = user.id
         result = add_swagger_api(requestApi, user)
