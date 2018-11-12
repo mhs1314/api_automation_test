@@ -56,9 +56,9 @@ def swagger_api(url, project, user):
                 for j in data["parameters"]:
                     if j["in"] == "header":
                         logging.error("header57")
-                        requestApi["headDict"].append({"name": j["name"].title(), "value": "String"})
+                        requestApi["headDict"].append({"name": j["name"], "value": "String"})
                     elif j["in"] == "body":
-                        dto = j["name"][:1].upper() + j["name"][1:]
+                        dto = j["name"]
                         logging.error("dto——body " + dto)
                         try:
                             if "description" in j:
@@ -69,7 +69,7 @@ def swagger_api(url, project, user):
                             logging.error("body71")
                             pass
                     elif j["in"] == "query":
-                        dto = j["name"][:1].upper() + j["name"][1:]
+                        dto = j["name"]
                         logging.error("dto——query " + dto)
                         try:
                             if "description" in j:
