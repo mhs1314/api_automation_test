@@ -42,7 +42,7 @@
                     </el-table-column>
                     <el-table-column prop="name" label="参数名" min-width="22%" sortable show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="value" label="说明" min-width="38%" sortable show-overflow-tooltip>
+                    <el-table-column prop="description" label="说明" min-width="38%" sortable show-overflow-tooltip>
                     </el-table-column>
                     <el-table-column prop="_type" label="参数类型" min-width="10%" sortable show-overflow-tooltip>
                     </el-table-column>
