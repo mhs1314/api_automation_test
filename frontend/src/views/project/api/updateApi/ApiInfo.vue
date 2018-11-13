@@ -42,7 +42,7 @@
                     </el-table-column>
                     <el-table-column prop="name" label="参数名" min-width="22%" sortable show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="value" label="参数值" min-width="38%" sortable show-overflow-tooltip>
+                    <el-table-column prop="value" label="说明" min-width="38%" sortable show-overflow-tooltip>
                     </el-table-column>
                     <el-table-column prop="_type" label="参数类型" min-width="10%" sortable show-overflow-tooltip>
                     </el-table-column>
@@ -64,13 +64,13 @@
                     <el-row :gutter="20" style="margin: 10px">
                         <div>
                             <el-col :span="7">参数名</el-col>
-                            <el-col :span="7">参数值</el-col>
+                            <el-col :span="7">说明</el-col>
                             <el-col :span="7">参数类型</el-col>
                             <el-col :span="3">必填?</el-col>
                         </div>
                         <div style="margin-top: 30px">
                             <el-col :span="7">{{parameterInfo.name}}</el-col>
-                            <el-col :span="7">{{parameterInfo.value}}</el-col>
+                            <el-col :span="7">{{parameterInfo.description}}</el-col>
                             <el-col :span="7">{{parameterInfo._type}}</el-col>
                             <el-col :span="3">
                                 <img v-show="parameterInfo.required" src="../../../../assets/icon-yes.svg"/>
@@ -95,7 +95,7 @@
                     </el-table-column>
                     <el-table-column prop="name" label="参数名" min-width="22%" sortable>
                     </el-table-column>
-                    <el-table-column prop="value" label="参数值" min-width="38%" sortable>
+                    <el-table-column prop="value" label="说明" min-width="38%" sortable>
                     </el-table-column>
                     <el-table-column prop="_type" label="参数类型" min-width="10%" sortable show-overflow-tooltip>
                     </el-table-column>
@@ -117,13 +117,13 @@
                     <el-row :gutter="20" style="margin: 10px">
                         <div>
                             <el-col :span="7">参数名</el-col>
-                            <el-col :span="7">参数值</el-col>
+                            <el-col :span="7">说明</el-col>
                             <el-col :span="7">参数类型</el-col>
                             <el-col :span="3">必含?</el-col>
                         </div>
                         <div style="margin-top: 30px">
                             <el-col :span="7">{{responseInfo.name}}</el-col>
-                            <el-col :span="7">{{responseInfo.value}}</el-col>
+                            <el-col :span="7">{{responseInfo.description}}</el-col>
                             <el-col :span="7">{{responseInfo._type}}</el-col>
                             <el-col :span="3">
                                 <img v-show="responseInfo.required" src="../../../../assets/icon-yes.svg"/>
