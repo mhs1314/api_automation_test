@@ -9,7 +9,7 @@ from api_test.models import Project, ApiInfo, ApiHead, ApiParameter, ApiParamete
 from django.db import transaction
 
 from api_test.serializers import ApiInfoDeserializer, ApiHeadDeserializer, ApiParameterDeserializer, \
-    ApiResponseDeserializer
+    ApiResponseDeserializer, ApiGroupLevelFirstSerializer
 
 logger = logging.getLogger(__name__)  # 这里使用 __name__ 动态搜索定义的 logger 配置，这里有一个层次关系的知识点。
 
@@ -25,10 +25,20 @@ def swagger_api(url, project, user):
     req = requests.get(url)
     data = req.json()
     apis = data["paths"]
+    tags = data["tags"]
     try:
         params = data["definitions"]
     except KeyError:
         pass
+    tg = []
+    obj = Project.objects.get(id=project)
+    for t in tags.items():
+        tag ={"name" : t["name"],"project_id" : project}
+        group_serialize = ApiGroupLevelFirstSerializer(data=tag)
+        if group_serialize.is_valid():
+            group_serialize.save(project=obj)
+            group_id = group_serialize.data.get("id")
+            tg.append({t["name"] : group_id})
     for api, m in apis.items():
         requestApi = {
             "project_id": project, "status": True, "mockStatus": True, "code": "", "desc": "",
@@ -37,6 +47,8 @@ def swagger_api(url, project, user):
         requestApi["apiAddress"] = api
         for requestType, data in m.items():
             requestApi["requestType"] = requestType.upper()
+            if "tags" in data:
+                requestApi["apiGroupLevelFirst_id"] = tg[data["tags"]]
             try:
                 requestApi["name"] = data["summary"]
             except KeyError:
