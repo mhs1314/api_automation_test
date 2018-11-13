@@ -62,7 +62,7 @@ def swagger_api(url, project, user):
                         logging.error("dto——body " + dto)
                         try:
                             if "description" in j:
-                                parameter.append({"name": dto, "value": j["description"], "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
                             else:
                                 parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
                         except:
@@ -73,7 +73,7 @@ def swagger_api(url, project, user):
                         logging.error("dto——query " + dto)
                         try:
                             if "description" in j:
-                                parameter.append({"name": dto, "value": j["description"], "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
+                                parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": j["description"]})
                             else:
                                 parameter.append({"name": dto, "value": "", "_type": j["type"],"required": j["required"], "restrict": "", "description": ""})
                         except:
@@ -98,9 +98,19 @@ def swagger_api(url, project, user):
                                 for key1, value1 in params[dto1]["properties"].items():
                                     logging.error("key1 "+key1)
                                     if "description" in value1 and "type" in value1:
-                                        response.append({"name": key + "." +key1, "value": value1["description"], "_type": value1["type"],"required": True, "description": value1["description"]})
+                                        response.append({"name": " "+key + "." +key1, "value": value1["description"], "_type": value1["type"],"required": True, "description": value1["description"]})
                                     else:
-                                        response.append({"name": key + "." +key1, "value": "", "_type": "String","required": True, "description": ""})
+                                        response.append({"name": " "+key + "." +key1, "value": "", "_type": "String","required": True, "description": ""})
+                                    if "items" in value1:
+                                        ref2 = value1["items"]["$ref"]
+                                        dto2 = ref2.split("/")[2]
+                                        logging.error("dto2 "+dto2)
+                                        for key2, value2 in params[dto2]["properties"].items():
+                                            logging.error("key2 "+key2)
+                                            if "description" in value2 and "type" in value2:
+                                                response.append({"name": "  "+key1 + "." +key2, "value": value2["description"], "_type": value2["type"],"required": True, "description": value2["description"]})
+                                            else:
+                                                response.append({"name": "  "+key1 + "." +key2, "value": "", "_type": "String","required": True, "description": ""})
                 requestApi["responseList"] = response
         requestApi["userUpdate"] = user.id
         result = add_swagger_api(requestApi, user)
