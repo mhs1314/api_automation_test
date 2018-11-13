@@ -48,7 +48,7 @@ def swagger_api(url, project, user):
         for requestType, data in m.items():
             requestApi["requestType"] = requestType.upper()
             if "tags" in data:
-                requestApi["apiGroupLevelFirst_id"] = tg[data["tags"]]
+                requestApi["apiGroupLevelFirst_id"] = tg[data["tags"][0]]
             try:
                 requestApi["name"] = data["summary"]
             except KeyError:
