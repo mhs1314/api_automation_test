@@ -32,7 +32,7 @@ def swagger_api(url, project, user):
         pass
     tg = []
     obj = Project.objects.get(id=project)
-    for t in tags.items():
+    for t in tags:
         tag ={"name" : t["name"],"project_id" : project}
         group_serialize = ApiGroupLevelFirstSerializer(data=tag)
         if group_serialize.is_valid():
