@@ -30,7 +30,7 @@ def swagger_api(url, project, user):
         params = data["definitions"]
     except KeyError:
         pass
-    tg = []
+    tg = {}
     obj = Project.objects.get(id=project)
     for t in tags:
         tag ={"name" : t["name"],"project_id" : project}
@@ -38,7 +38,7 @@ def swagger_api(url, project, user):
         if group_serialize.is_valid():
             group_serialize.save(project=obj)
             group_id = group_serialize.data.get("id")
-            tg.append({t["name"] : group_id})
+            tg.update({t["name"] : group_id})
     for api, m in apis.items():
         requestApi = {
             "project_id": project, "status": True, "mockStatus": True, "code": "", "desc": "",
