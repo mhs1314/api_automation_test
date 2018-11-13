@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 
 from api_test.common.common import record_dynamic
-from api_test.models import Project, ApiInfo, ApiHead, ApiParameter, ApiParameterRaw, ApiResponse, ApiOperationHistory
+from api_test.models import Project, ApiInfo, ApiHead, ApiParameter, ApiParameterRaw, ApiResponse, ApiGroupLevelFirst, ApiOperationHistory
 from django.db import transaction
 
 from api_test.serializers import ApiInfoDeserializer, ApiHeadDeserializer, ApiParameterDeserializer, \
@@ -48,6 +48,8 @@ def swagger_api(url, project, user):
         for requestType, data in m.items():
             requestApi["requestType"] = requestType.upper()
             if "tags" in data:
+                logging.error("tags")
+                logging.error(tg[data["tags"][0]])
                 requestApi["apiGroupLevelFirst_id"] = tg[data["tags"][0]]
             try:
                 requestApi["name"] = data["summary"]
@@ -137,11 +139,12 @@ def add_swagger_api(data, user):
     """
     try:
         obj = Project.objects.get(id=data["project_id"])
+        group = ApiGroupLevelFirst.objects.get(id=data["apiGroupLevelFirst_id"])
         try:
             with transaction.atomic():
                 serialize = ApiInfoDeserializer(data=data)
                 if serialize.is_valid():
-                    serialize.save(project=obj)
+                    serialize.save(project=obj,apiGroupLevelFirst=group)
                     api_id = serialize.data.get("id")
                     try:
                         if len(data["headDict"]):
