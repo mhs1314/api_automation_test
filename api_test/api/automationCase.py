@@ -653,7 +653,7 @@ class AddOldApi(APIView):
                             for j in api_data["requestParameter"]:
                                 if j["name"]:
                                     AutomationParameter(automationCaseApi=AutomationCaseApi.objects.get(id=case_api),
-                                                        name=j["name"], value=j["value"], description=n["description"], interrelate=False).save()
+                                                        name=j["name"], value=j["value"], description=j["description"], interrelate=False).save()
                     else:
                         if api_data["requestParameterRaw"]:
                             # data = json.loads(serializers.serialize("json",data["requestParameterRaw"]))

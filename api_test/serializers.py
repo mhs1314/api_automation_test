@@ -373,8 +373,8 @@ class AutomationParameterDeserializer(serializers.ModelSerializer):
     自动化用例接口请求参数信息反序列化
     """
     class Meta:
-        model = AutomationParameter
-        fields = ('id', 'automationCaseApi_id', 'name', 'value', 'interrelate', 'description')
+        model =
+        fieldsAutomationParameter = ('id', 'automationCaseApi_id', 'name', 'value', 'interrelate', 'description')
 
 
 class AutomationParameterRawSerializer(serializers.ModelSerializer):
