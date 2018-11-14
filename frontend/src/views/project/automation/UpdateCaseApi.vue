@@ -83,14 +83,19 @@
                             </el-row>
                         </div>
                         <el-table :data="form.parameter" highlight-current-row :class="ParameterTyep? 'parameter-a': 'parameter-b'">
-                            <el-table-column prop="name" label="参数名" min-width="28%" sortable>
+                            <el-table-column prop="name" label="参数名" min-width="25%" sortable>
                                 <template slot-scope="scope">
-                                    <el-input v-model.trim="scope.row.name" :value="scope.row.name" placeholder="请输入参数值"></el-input>
+                                    <el-input v-model.trim="scope.row.name" :value="scope.row.name" placeholder="请输入参数名"></el-input>
                                 </template>
                             </el-table-column>
-                            <el-table-column prop="value" label="参数值" min-width="40%" sortable>
+                            <el-table-column prop="value" label="参数值" min-width="30%" sortable>
                                 <template slot-scope="scope">
                                     <el-input v-model.trim="scope.row.value" :value="scope.row.value" placeholder="请输入参数值"></el-input>
+                                </template>
+                            </el-table-column>
+                            <el-table-column prop="description" label="参数说明" min-width="14%" sortable>
+                                <template slot-scope="scope">
+                                    <el-input v-model.trim="scope.row.description" :value="scope.row.description" placeholder="请输入参数说明"></el-input>
                                 </template>
                             </el-table-column>
                             <el-table-column prop="interrelate" label="是否关联" min-width="13%" sortable>
