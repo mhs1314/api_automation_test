@@ -374,7 +374,7 @@ class AutomationParameterDeserializer(serializers.ModelSerializer):
     """
     class Meta:
         model = AutomationParameter
-        fields = ('id', 'automationCaseApi_id', 'name', 'value', 'interrelate')
+        fields = ('id', 'automationCaseApi_id', 'name', 'value', 'interrelate', 'description')
 
 
 class AutomationParameterRawSerializer(serializers.ModelSerializer):
