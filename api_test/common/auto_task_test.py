@@ -36,6 +36,9 @@ def test_api(host, case_id, _id, time):
     :param time: 测试时间
     :return:
     """
+    logging.error("_id" + _id)
+    logging.error("case_id" + case_id)
+    logging.error("host" + host)
     data = AutomationCaseApiSerializer(AutomationCaseApi.objects.get(id=_id, automationTestCase=case_id)).data
     http_type = data['httpType']
     request_type = data['requestType']
