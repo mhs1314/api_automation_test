@@ -50,7 +50,6 @@ def test_api(host, case_id, _id, time):
         url = 'http://'+address
     else:
         url = 'https://'+address
-    logging.error("_id" + _id)
     if data['requestParameterType'] == 'form-data':
         parameter_list = json.loads(serializers.serialize('json',
                                                           AutomationParameter.objects.filter(automationCaseApi=_id)))
@@ -59,7 +58,7 @@ def test_api(host, case_id, _id, time):
         for i in parameter_list:
             key_ = i['fields']['name']
             value = i['fields']['value']
-            logging.error(key_ + " : " + value)
+
             try:
                 if i['fields']['interrelate']:
                     interrelate_type = re.findall('(?<=<response\[).*?(?=\])', value)
@@ -93,7 +92,6 @@ def test_api(host, case_id, _id, time):
                     parameter[key_] = re.sub(pattern, param_data, value)
                 else:
                     parameter[key_] = value
-
             except Exception as e:
                 logging.exception(e)
                 record_auto_results(_id=_id, header=header, parameter=parameter,

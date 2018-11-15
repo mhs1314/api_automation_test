@@ -1048,6 +1048,7 @@ class StartTest(APIView):
         :param request:
         :return:
         """
+        logging.error("执行测试用例")
         data = JSONParser().parse(request)
         result = self.parameter_check(data)
         if result:
@@ -1073,7 +1074,6 @@ class StartTest(APIView):
             return JsonResponse(code="999990", msg="接口不存在！")
         AutomationTestResult.objects.filter(automationCaseApi=data["id"]).delete()
         try:
-            logging.error("starttest" + data["id"])
             result = test_api(host_id=data["host_id"], case_id=data["case_id"],
                               _id=data["id"], project_id=data["project_id"])
         except Exception as e:
