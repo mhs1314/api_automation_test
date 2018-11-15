@@ -50,6 +50,7 @@ def test_api(host, case_id, _id, time):
         url = 'http://'+address
     else:
         url = 'https://'+address
+    logging.error("_id" + _id)
     if data['requestParameterType'] == 'form-data':
         parameter_list = json.loads(serializers.serialize('json',
                                                           AutomationParameter.objects.filter(automationCaseApi=_id)))
