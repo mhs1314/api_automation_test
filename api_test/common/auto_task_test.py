@@ -92,6 +92,7 @@ def test_api(host, case_id, _id, time):
                     parameter[key_] = re.sub(pattern, param_data, value)
                 else:
                     parameter[key_] = value
+                    logging.info(key_ + " : " + value)
             except Exception as e:
                 logging.exception(e)
                 record_auto_results(_id=_id, header=header, parameter=parameter,
