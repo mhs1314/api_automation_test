@@ -58,7 +58,7 @@ def test_api(host, case_id, _id, time):
         for i in parameter_list:
             key_ = i['fields']['name']
             value = i['fields']['value']
-
+            logging.error(key_ + " : " + value)
             try:
                 if i['fields']['interrelate']:
                     interrelate_type = re.findall('(?<=<response\[).*?(?=\])', value)
@@ -92,7 +92,7 @@ def test_api(host, case_id, _id, time):
                     parameter[key_] = re.sub(pattern, param_data, value)
                 else:
                     parameter[key_] = value
-                    logging.info(key_ + " : " + value)
+
             except Exception as e:
                 logging.exception(e)
                 record_auto_results(_id=_id, header=header, parameter=parameter,
